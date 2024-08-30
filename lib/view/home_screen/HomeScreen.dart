@@ -30,7 +30,9 @@ class _HomeScreenState extends State<HomeScreen>
       floatingActionButton: FloatingActionButton(
           onPressed: () async {
             await Provider.of<HomeScreenController>(context, listen: false).getUserData();
-          }),
+          },
+        child: Icon(Icons.refresh, color: Colors.black,),
+          ),
       body: Consumer<HomeScreenController>(
         builder: (context, providerObj, child) =>
             Center(
